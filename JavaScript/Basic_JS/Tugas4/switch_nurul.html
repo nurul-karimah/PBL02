@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ekstrak Data NIP</title>
+</head>
+<body>
+  <h2>Ekstrak Data dari NIP</h2>
+  <label for="nip">Masukkan NIP:</label>
+  <input type="text" id="nip" size="20">
+  <button onclick="prosesNIP()">Proses</button>
+
+  <!-- Bagian hasil akan tampil setelah input diproses -->
+  <div id="hasil" style="display:none; margin-top:20px;">
+    <h3>Hasil:</h3>
+    <p><strong>Tanggal Lahir:</strong> <span id="tglLahir"></span></p>
+    <p><strong>Tanggal ASN:</strong> <span id="tglASN"></span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="jk"></span></p>
+    <p><strong>No. Urut:</strong> <span id="noUrut"></span></p>
+  </div>
+
+  <script>
+    function prosesNIP() {
+      const nip = document.getElementById("nip").value;
+
+      if (nip.length < 18) {
+        alert("NIP minimal 18 digit!");
+        return;
+      }
+
+      // ambil bagian sesuai aturan
+      const tglLahirRaw = nip.substring(0, 8);     // 8 digit awal
+      const tglASN = nip.substring(8, 14);        // 6 digit berikutnya
+      const jkDigit = nip.substring(14, 15);      // 1 digit berikutnya
+      const noUrut = nip.substring(15, 18);       // 3 digit terakhir
+
+      // ubah format tanggal lahir
+      const year = tglLahirRaw.substring(0, 4);
+      const month = tglLahirRaw.substring(4, 6);
+      const day = tglLahirRaw.substring(6, 8);
+      const tglLahir = new Date(year, month - 1, day)
+        .toLocaleDateString("en-GB", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+      // jenis kelamin
+      let jk = "";
+      if (jkDigit === "1") {
+        jk = "Laki-Laki";
+      } else if (jkDigit === "2") {
+        jk = "Perempuan";
+      } else {
+        jk = "Tidak diketahui";
+      }
+
+      // tampilkan hasil
+      document.getElementById("tglLahir").textContent = `${tglLahir} (${tglLahirRaw})`;
+      document.getElementById("tglASN").textContent = tglASN;
+      document.getElementById("jk").textContent = jk + " (" + jkDigit + ")";
+      document.getElementById("noUrut").textContent = noUrut;
+
+      // tampilkan div hasil
+      document.getElementById("hasil").style.display = "block";
+    }
+  </script>
+</body>
+</html>
