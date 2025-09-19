@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lampu Lalu Lintas</title>
+</head>
+<body>
+
+    <h2>Aplikasi Lampu Lalu Lintas</h2>
+    
+<script>
+    let warna = prompt("Masukkan warna lampu (Merah, Kuning, Hijau):").toLowerCase(); 
+    // .toLowerCase() --> mengubah semua huruf menjadi huruf kecil
+    let pesan = "";
+
+    if (warna === "merah") { 
+        pesan = "berhenti";
+    } else if (warna === "kuning") {
+        pesan = "berhati-hati";
+    } else if (warna === "hijau") {
+        pesan = "berjalan";
+    } else {
+        pesan = "menepi ke pinggir jalan.";
+    }
+
+    document.write("<h2>Anda sedang melihat lampu " + warna + 
+                   ", sebaiknya kendaraan Anda " + pesan + "</h2>");
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Herbal Natural Nusantara</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #7BAE7F; /* hijau herbal */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      color: white;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .navbar ul li {
+      display: inline;
+    }
+    .navbar ul li a {
+      color: black;
+      text-decoration: none;
+    }
+    .navbar .search {
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: none;
+    }
+
+    /* Hero */
+    .hero {
+      background-color: #DCECCF;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Best Seller */
+    .section {
+      padding: 20px;
+      background-color: #F5F0D7;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+    }
+    .products {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .price {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #C6A0D3; /* ungu pastel */
+      color: white;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .btn-shop {
+      margin: 30px auto 0;
+      display: block;
+      padding: 10px 30px;
+      background-color: #7BAE7F;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+    }
+    .btn-shop:hover {
+      background-color: #5c8f62;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Beauty Herbal<br>Natural Nusantara</div>
+    <ul>
+      <li><a href="#">Shop All</a></li>
+      <li><a href="#">Free Consultant</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Carrier</a></li>
+    </ul>
+    <input type="text" class="search" placeholder="Cari Produk">
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Welcome to Beauty Herbal</h1>
+  </div>
+
+  <!-- Best Seller -->
+  <div class="section">
+    <h2>Best Seller</h2>
+    <div class="products">
+      <div class="product">
+        <div class="img-box" style="height:100px;background:#eee;"></div>
+        <div class="price">Rp 199k</div>
+      </div>
+      <div class="product">
+        <div class="img-box" style="height:100px;background:#eee;"></div>
+        <div class="price">Rp 99k</div>
+      </div>
+      <div class="product">
+        <div class="img-box" style="height:100px;background:#eee;"></div>
+        <div class="price">Rp 75k</div>
+      </div>
+    </div>
+    <button class="btn-shop" onclick="shopAll()">SHOP ALL</button>
+  </div>
+
+  <script>
+    // JavaScript interaksi
+    function shopAll() {
+      alert("Menampilkan semua produk herbal...");
+      // bisa diarahkan ke halaman produk
+      // window.location.href = "/shop";
+    }
+    p
+    p
+  </script>
+
+</body>
+</html>

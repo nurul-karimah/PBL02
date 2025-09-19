@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+<body>
+<script>
+    // Input Status
+    const nama = prompt("1. Masukkan Nama Anda:");
+    const jenisKelamin = prompt("2. Masukkan Jenis Kelamin (Laki-laki / Perempuan):").toLowerCase();
+    const status = prompt("3. Masukkan Status (Sendiri / Kawin / Cerai):").toLowerCase();
+
+    // Tentukan keterangan
+    let keterangan = "";
+    if (jenisKelamin === "laki-laki" && status === "sendiri") {
+        keterangan = "Perjaka";
+    } else if (jenisKelamin === "laki-laki" && status === "kawin") {
+        keterangan = "Menikah";
+    } else if (jenisKelamin === "laki-laki" && status === "cerai") {
+        keterangan = "Duda";
+    } else if (jenisKelamin === "perempuan" && status === "sendiri") {
+        keterangan = "Perawan";
+    } else if (jenisKelamin === "perempuan" && status === "kawin") {
+        keterangan = "Menikah";
+    } else if (jenisKelamin === "perempuan" && status === "cerai") {
+        keterangan = "Janda";
+    } else {
+        keterangan = "Data tidak valid!";
+    }
+
+    // Output
+    document.write("<h2>Nama: " + nama + "<br>");
+    document.write("Jenis Kelamin: " + jenisKelamin + "<br>");
+    document.write("Status: " + status + "<br>");
+    document.write("Keterangan: <b>" + keterangan + "</b></h2>");
+</script>
+</body>
+</html>

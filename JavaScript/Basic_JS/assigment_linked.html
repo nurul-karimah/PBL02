@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let a = true, b = true, c = false;
+    document.write("a: " + a + ", b: " + b + ", c: " + c + "<br>");
+    a &&= b; 
+    document.write("a after a&&=b : " + a + "<br>");
+    a &&= c; 
+    document.write("a after a&&=c : " + a + "<br>");
+    a ||= c; 
+    document.write("a after a||=c : " + a + "<br>");
+    a ||= b; 
+    document.write("a after a||=b : " + a);
+</script>
+</body>
+</html>

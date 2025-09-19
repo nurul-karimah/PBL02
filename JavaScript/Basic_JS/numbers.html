@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   /*
+    const input = prompt("Number 1:");
+    const z1 = parseFloat("input");
+    const z2 = parseFloat(prompt("Number 2:"));
+    const result = z1 + z2;
+    document.write(z1 + "+" + z2 + "=" + result);
+    */
+  
+    // Input 1: Nama
+    const nama = prompt("1. Masukkan Nama:");
+
+    // Input 2: Jenis Kelamin
+    const jenisKelamin = prompt("2. Masukkan Jenis Kelamin (laki-laki / perempuan):");
+
+    // Input 3: Status
+    const status = prompt("3. Masukkan Status (sendiri / kawin / cerai):");
+
+    // Tentukan keterangan otomatis
+    let keterangan = "";
+
+    if (jenisKelamin.toLowerCase() === "laki-laki" && status.toLowerCase() === "sendiri") {
+        keterangan = "perjaka";
+    } else if (jenisKelamin.toLowerCase() === "perempuan" && status.toLowerCase() === "sendiri") {
+        keterangan = "perawan";
+    } else if (jenisKelamin.toLowerCase() === "perempuan" && status.toLowerCase() === "kawin") {
+        keterangan = "menikah";
+    } else if (jenisKelamin.toLowerCase() === "laki-laki" && status.toLowerCase() === "kawin") {
+        keterangan = "menikah";
+    } else if (jenisKelamin.toLowerCase() === "perempuan" && status.toLowerCase() === "cerai") {
+        keterangan = "janda";
+    } else if (jenisKelamin.toLowerCase() === "laki-laki" && status.toLowerCase() === "cerai") {
+        keterangan = "duda";
+    } else {
+        keterangan = "tidak diketahui";
+    }
+
+    // Tampilkan hasil keterangan
+    document.write(nama + "+" + jenisKelamin + "+" + status + "=" + keterangan);
+   
+</script>
+</body>
+</html>
